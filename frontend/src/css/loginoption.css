@@ -1,43 +1,42 @@
-#login-option{
-    /* height: 90vh; */
-    background-color: #3AAFA9;
-    /* padding:3rem; */
+#login-option {
+  /* height: 90vh; */
+  background-color: #3aafa9;
+  /* padding:3rem; */
 }
 
-#option-btn{
-    background-color: #2d3a3f;
-    color: #FEFFFF;
-    padding: 2rem;
-    border: none;
+#option-btn {
+  background-color: #2d3a3f;
+  color: #feffff;
+  padding: 2rem;
+  border: none;
 }
 
-#whomsg{
-    font-size: 3rem;
-    font-weight: bolder;
-    /* padding-bottom: 1rem; */
+#whomsg {
+  font-size: 3rem;
+  font-weight: bolder;
+  /* padding-bottom: 1rem; */
 }
 
-#option-btn:hover{
-    -webkit-box-shadow: 0px 0px 37px 10px rgba(116,219,193,1);
--moz-box-shadow: 0px 0px 37px 10px rgba(116,219,193,1);
-box-shadow: 0px 0px 37px 10px rgba(116,219,193,1);
-background-color: black;
-    /* color: black; */
+#option-btn:hover {
+  -webkit-box-shadow: 0px 0px 37px 10px rgba(116, 219, 193, 1);
+  -moz-box-shadow: 0px 0px 37px 10px rgba(116, 219, 193, 1);
+  box-shadow: 0px 0px 37px 10px rgba(116, 219, 193, 1);
+  background-color: black;
+  /* color: black; */
 }
 
-#card-line{
-    border-top: 3px solid;
+#card-line {
+  border-top: 3px solid;
 }
 
-
-#optcard{
-    background-color: #2B7A78;
-    padding-top:3rem;
-    padding-bottom: 4rem;
-    height: 80%;
-    border: none;
-    border-radius: 2rem;
-    -webkit-box-shadow: 0px 0px 37px 6px rgba(222,242,241,1);
--moz-box-shadow: 0px 0px 37px 6px rgba(222,242,241,1);
-box-shadow: 0px 0px 37px 6px rgba(222,242,241,1);
+#optcard {
+  background-color: #2b7a78;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  height: 80%;
+  border: none;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0px 0px 37px 6px rgba(222, 242, 241, 1);
+  -moz-box-shadow: 0px 0px 37px 6px rgba(222, 242, 241, 1);
+  box-shadow: 0px 0px 37px 6px rgba(222, 242, 241, 1);
 }
