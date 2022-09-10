@@ -26,7 +26,7 @@ function LoginOption(props) {
               <Link to={patientURL}>
                 <button
                   type="button"
-                  className="mx-5 rounded-pill display-5 text-center" id ="option-btn"
+                  className="mx-5 display-5 text-center" id ="option-btn"
                 >
                   Patient
                 </button>
@@ -36,7 +36,7 @@ function LoginOption(props) {
               <Link to={doctorURL}>
                 <button
                   type="button"
-                  className="mx-5 rounded-pill display-5 text-center" id ="option-btn"
+                  className="mx-5 display-5 text-center" id ="option-btn"
                 >
                   Doctor
                 </button>

@@ -1,6 +1,7 @@
 #login-option {
   /* height: 90vh; */
-  background-color: #3aafa9;
+    background: rgb(30,24,139);
+    background: linear-gradient(75deg, rgba(30,24,139,1) 0%, rgba(222,0,255,1) 100%);
   /* padding:3rem; */
 }
 
@@ -8,20 +9,24 @@
   background-color: #2d3a3f;
   color: #feffff;
   padding: 2rem;
+  font-size: 1.9rem;
   border: none;
+  border-radius: 2.25rem;
 }
 
 #whomsg {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bolder;
   /* padding-bottom: 1rem; */
 }
 
 #option-btn:hover {
-  -webkit-box-shadow: 0px 0px 37px 10px rgba(116, 219, 193, 1);
+  /* -webkit-box-shadow: 0px 0px 37px 10px rgba(116, 219, 193, 1);
   -moz-box-shadow: 0px 0px 37px 10px rgba(116, 219, 193, 1);
-  box-shadow: 0px 0px 37px 10px rgba(116, 219, 193, 1);
-  background-color: black;
+  box-shadow: 0px 0px 37px 10px rgba(116, 219, 193, 1); */
+  background-color: #BC6FF1;
+  color: black;
+  font-size: xx-large;
   /* color: black; */
 }
 
@@ -30,13 +35,11 @@
 }
 
 #optcard {
-  background-color: #2b7a78;
+  box-shadow: -3px 3px 10px black;
+  background-color: #892CDC;
   padding-top: 3rem;
   padding-bottom: 4rem;
   height: 80%;
   border: none;
-  border-radius: 2rem;
-  -webkit-box-shadow: 0px 0px 37px 6px rgba(222, 242, 241, 1);
-  -moz-box-shadow: 0px 0px 37px 6px rgba(222, 242, 241, 1);
-  box-shadow: 0px 0px 37px 6px rgba(222, 242, 241, 1);
+  border-radius: 1.2rem;
 }
