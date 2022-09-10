@@ -18,6 +18,7 @@ function App() {
         <Route exact path="/login/doctor" element={<><Navbar /><AdminLogin /></>} />
         <Route exact path="/register" element={<><Navbar /><LoginOption message="Register" /></>} />
         <Route exact path="/register/patient" element={<><Navbar /><Register /></>} />
+        <Route exact path="/register/doctor" element={<><Navbar /><Register /></>} />
       </Routes>
     </>
   );
