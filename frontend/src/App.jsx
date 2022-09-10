@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import LoginOption from "./components/LoginOption";
 import Register from "./components/Register";
+import AdminRegister from "./components/AdminRegister";
 import Login from './components/Login'
 import AdminLogin from './components/AdminLogin'
 
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/login/doctor" element={<><Navbar /><AdminLogin /></>} />
         <Route exact path="/register" element={<><Navbar /><LoginOption message="Register" /></>} />
         <Route exact path="/register/patient" element={<><Navbar /><Register /></>} />
+        <Route exact path="/register/doctor" element={<><Navbar /><AdminRegister /></>} />
       </Routes>
     </>
   );
