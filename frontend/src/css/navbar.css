@@ -1,3 +1,39 @@
 .zProp{
     z-index: 999;
 }
+
+#navbarclr{
+    background-color: #17252A;
+    /* font-size: larger; */
+    padding: 0.7rem;
+    /* opacity: 0.8; */
+}
+
+#navbtnclr{
+    color: #DEF2F1;
+    font-weight: bolder;
+    font-size: large;
+    padding-right: 0.5rem;
+}
+
+#loginbtnclr{
+    color: #FFF5E4;
+    background-color: #2B7A78;
+    font-weight: bold;
+    border: none;
+}
+
+#loginbtnclr:hover{
+    background-color: #FFF5E4;
+    color: #2B7A78;
+    /* background-color:#857770;
+    color: #f3eae8; */
+    /* font-weight: 800; */
+    font-size: larger;
+}
+
+#whomsg{
+    /* color: #FFF5E4; */
+    font-weight: bolder;
+    color:#DEF2F1;
+}
