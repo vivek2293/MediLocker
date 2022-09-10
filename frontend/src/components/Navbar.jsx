@@ -5,9 +5,9 @@ import "../css/navbar.css";
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-sm bg-light shadow zProp">
+      <nav  id = "navbarclr" className="navbar navbar-expand-sm shadow zProp">
         <div className="container-fluid px-4">
-          <NavLink className="navbar-brand" to="#">
+          <NavLink id = "navbtnclr" className="navbar-brand" to="#">
             Navbar
           </NavLink>
           <button
@@ -24,34 +24,34 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="/">
+                <NavLink id = "navbtnclr" className="nav-link" aria-current="page" to="/">
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">
+                <NavLink id = "navbtnclr" className="nav-link" to="/about">
                   About
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/services">
+                <NavLink id = "navbtnclr" className="nav-link" to="/services">
                   Services
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
+                <NavLink id = "navbtnclr" className="nav-link" to="/contact">
                   Contact
                 </NavLink>
               </li>
             </ul>
             <form className="d-flex" role="search">
               <Link className="nav-link" to="/login">
-                <button className="btn btn-outline-primary rounded-pill ms-auto">
+                <button id = "loginbtnclr" className="btn btn-outline-primary rounded-pill ms-auto">
                   <i className="fa fa-sign-in me-2"></i>Login
                 </button>
               </Link>
               <Link className="nav-link" to="/register">
-                <button className="btn btn-outline-primary rounded-pill ms-2">
+                <button id = "loginbtnclr" className="btn btn-outline-primary rounded-pill ms-2">
                   <i className="fa fa-user-plus me-2"></i>Register
                 </button>
               </Link>

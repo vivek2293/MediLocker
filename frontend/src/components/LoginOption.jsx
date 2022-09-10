@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import '../css/loginoption.css'
 function LoginOption(props) {
   const sectionStyle = {
     height: "100vh",
@@ -11,21 +11,22 @@ function LoginOption(props) {
   console.log(address);
   return (
     <>
-      <section className="loginOption" style={sectionStyle}>
+      <section className="loginOption"  id = "login-option" style={sectionStyle}>
         <div
           className="container d-flex justify-content-center align-items-center"
-          style={{ height: "100vh" }}
+          style={{ height: "100vh" }} id="option-box"
         >
-          <div className="box">
-            <h3 className="text-center mb-4 display-6">
+          <div className="card py-3 px-5">
+            <h3 id = "whomsg" className="text-center display-6">
               {" "}
               Who Do You Want To {props.message} As?
             </h3>
-            <div className="btnLayout d-flex justify-content-center align-items-center">
+            <hr />
+            <div className="btnLayout d-flex py-3 justify-content-center align-items-center">
               <Link to={patientURL}>
                 <button
                   type="button"
-                  className="mx-5 px-4 py-2 rounded-pill display-4 text-center"
+                  className="mx-5 rounded-pill display-4 text-center" id ="option-btn"
                 >
                   Patient
                 </button>
@@ -33,7 +34,7 @@ function LoginOption(props) {
               <Link to={doctorURL}>
                 <button
                   type="button"
-                  className="mx-5 px-4 py-2 rounded-pill display-4 text-center"
+                  className="mx-5 rounded-pill display-4 text-center" id ="option-btn"
                 >
                   Doctor
                 </button>
