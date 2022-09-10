@@ -43,7 +43,7 @@ const CreateTaskDR =asyncWrapper(async (req, res, next) => {
 
 const getTaskReport = asyncWrapper(async (req, res, next) => {
   // console.log(req.body.Patemail)
-  const task = await Doc.findOne({ Patemail: req.body.Patemail })
+  const task = await Doc.find({ patemail: req.body.email })
   if (!task) {
     return next(createCustomError(`No task with id :}`, 404))
   }
@@ -73,9 +73,9 @@ const getTaskdr = asyncWrapper(async (req, res, next) => {
 			},
 			JWT_SECRET
 		)
-    return res.json({ status: 'ok', data: token })
-  }
 
+    return res.json({ task })
+  }
 
 
 })

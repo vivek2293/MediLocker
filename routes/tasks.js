@@ -4,6 +4,7 @@ const router = express.Router()
 const {
   CreateTask,
   getTask,
+  getReport
 
 } = require('../controllers/tasks')
 
@@ -21,7 +22,9 @@ const{
 
 router.route('/').post(CreateTask)
 
-router.route('/report').post(CreateReport).get(getTaskReport)
+router.route('/report/doc').post(CreateReport).get(getTaskReport)
+
+router.route('/report/pat').get(getReport)
 
 router.route('/login').post(getTask)
 
