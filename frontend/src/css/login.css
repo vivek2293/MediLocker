@@ -1,0 +1,27 @@
+#loginSection{
+    padding: 0;
+    margin: 0;
+    background: rgb(30,24,139);
+    background: linear-gradient(75deg, rgba(30,24,139,1) 0%, rgba(222,0,255,1) 100%);
+}
+
+#customLogin{
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#card{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    box-shadow: -3px 3px 10px black;
+}
+
+#form{
+    padding-top: 1%;
+}
+
+#vr{
+    height: 90%;
+}
