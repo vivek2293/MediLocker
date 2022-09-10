@@ -1,8 +1,8 @@
 import axios from "axios";
 import React from "react";
 import { Link } from 'react-router-dom'
-import registerCardImg from "../Resource/img/registerCardImg.png";
-import "./css/register.css";
+import registerCardImg from "../resources/images/registerCardImg.png";
+import "../css/register.css";
 
 const Register = () => {
   const handleSubmit = () => {

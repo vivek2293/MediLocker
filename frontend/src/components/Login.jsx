@@ -1,7 +1,7 @@
 import React from "react";
-import loginImage from "../Resource/img/login.png";
+import loginImage from "../resources/images/login.png";
 import { Link } from "react-router-dom";
-import "./css/login.css";
+import "../css/login.css";
 import axios from "axios";
 
 function Login() {
