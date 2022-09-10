@@ -11,7 +11,7 @@ function LoginOption(props) {
   console.log(address);
   return (
     <>
-      <section className="loginOption my-5 py-5"  id = "login-option" style={sectionStyle}>
+      <section className="loginOption mt-5 py-5"  id = "login-option" style={sectionStyle}>
         <div
           className="container d-flex justify-content-center align-items-center"
            id="option-box"
