@@ -1,8 +1,8 @@
 import axios from "axios";
 import React from "react";
 import { Link } from 'react-router-dom'
-import registerCardImg from "../Resource/img/registerCardImg.png";
-import "./css/register.css";
+import registerCardImg from "../resources/images/registerCardImg.png";
+import "../css/register.css";
 
 const AdminRegister = () => {
   
@@ -32,9 +32,6 @@ const AdminRegister = () => {
 
         if (result.status === 200 && result.data.recordsFiltered >= 1) {
           for (let item = 0; item < list.length; item++) {
-            console.log(list[item][2]);
-            console.log(docRegistration);
-            console.log(list[item][2] === docRegistration);
             if (list[item][2] === docRegistration) {
               alert("verified doctor");
               postEmail();
