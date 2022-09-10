@@ -32,7 +32,7 @@ function Login() {
   };
   return (
     <>
-      <section className="p-3" id="loginSection">
+      <section className="p-5" id="loginSection">
         <div className="d-flex justify-content-end px-3">
           <Link className="nav-link active" aria-current="page" to="/">
             <span className="fa fa-close fa-2x"></span>
