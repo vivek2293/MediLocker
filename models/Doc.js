@@ -41,9 +41,17 @@ const DocSchema = new mongoose.Schema({
   },
 
 
-  Prescribed: {
-    type: String,
+  Object: {
+    type: Object,
     required: [true, "must provide Prescribed"],
+    prescription:{
+      type: String,
+      required: true,
+    },
+    Disease:{
+      type: String,
+      required: true,
+    },
     trim: true,
   },
 

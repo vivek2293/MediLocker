@@ -62,9 +62,19 @@ const getTask = asyncWrapper(async (req, res, next) => {
   }
 })
 
+const getReport = asyncWrapper(async (req, res, next) => {
+
+  const task = await Doc.find({ Patemail: req.body.Patemail })
+  if (!task) {
+    return next(createCustomError(`No task with id :}`, 404))
+  }
+  res.status(200).json({ task })
+})
+
 
 
 module.exports = {
   CreateTask,
   getTask,
+  getReport
 }

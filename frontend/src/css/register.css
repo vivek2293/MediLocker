@@ -16,13 +16,13 @@
 #btnSubmit{
     font-weight: bolder;
     border-color: none;
-    color: #FFF5E4;
-    background-color: #2B7A78;
+    color: #DCD6F7;
+    background-color: #091ba2;
 }
 
 #btnSubmit:hover{
-    background-color: #FFF5E4;
-    color: #2B7A78;
+    background-color: #DCD6F7;
+    color: #091ba2;
 }
 
 #card{
