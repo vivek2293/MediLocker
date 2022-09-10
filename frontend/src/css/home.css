@@ -1,0 +1,25 @@
+
+.snapContainer{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height:100vh;
+}
+.snapSection{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    scroll-snap-align: start;
+}
+
+.particleScreen{
+    z-index: -1;
+    background-color: blueviolet ;
+}
+.coverScreen{
+    z-index: 56;
+    color: aliceblue;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(37, 31, 31, 0.2);
+}

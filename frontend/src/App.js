@@ -1,19 +1,21 @@
-import React, { useCallback } from 'react';
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
-import './App.css';
-import particlesOptions from "./particles.json";
+import React from "react";
+import "./App.css";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import { Routes, Route } from "react-router-dom";
+import LoginOption from "./components/LoginOption";
 
 function App() {
-    const particlesInit = useCallback(main => {
-        loadFull(main);
-    }, [])
-
-    return (
-        <div className="App">
-            <Particles options={particlesOptions} init={particlesInit}/>
-        </div>
-    );
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/login" element={<LoginOption message="Login" />} />
+        <Route exact path="/register" element={<LoginOption message="Register" />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;
