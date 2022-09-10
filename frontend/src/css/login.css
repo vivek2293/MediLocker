@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 #loginSection{
     padding: 0;
     margin: 0;
@@ -13,15 +14,45 @@
 }
 
 #card{
+    font-weight: bolder;
     padding-top: 1%;
     padding-bottom: 1%;
     box-shadow: -3px 3px 10px black;
 }
+.cardtxt{
+    font-family: 'Poppins', sans-serif;
+    
+}
 
+.card-title{
+    font-family: 'Poppins', sans-serif;
+}
 #form{
     padding-top: 1%;
 }
 
+#opsel{
+    font-weight: bolder;
+    border-color: none;
+    color: #FFF5E4;
+    background-color: #2B7A78;
+}
+
+#opsel:hover{
+    background-color: #FFF5E4;
+    color: #2B7A78;
+}
+#opsel1{
+    font-weight: bolder;
+    border-color: none;
+    color: #FFF5E4;
+    background-color: #2B7A78;
+}
+
+#opsel1:hover{
+    background-color: #FFF5E4;
+    color: #2B7A78;
+}
 #vr{
     height: 90%;
 }

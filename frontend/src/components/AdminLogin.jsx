@@ -38,7 +38,7 @@ function Login() {
         </div>
         <div className="container w-75" id="customLogin">
           <div className="card mb-3" id="card">
-          <div className="row g-0">
+          <div className=" row g-0">
                 <div className="col-md-7">
                     <div className="card-body">
                     <h5 className="card-title text-center py-4 display-6 fw-bold">
@@ -82,12 +82,12 @@ function Login() {
                         </div>
                         <div className="col-12 my-4 d-flex justify-content-center">
                         <button
-                            className="btn btn-outline-primary"
-                            onClick={checkStatus}
+                            className="btn btn-outline-secondary"
+                            onClick={checkStatus} id="opsel"
                         >
                             Login
                         </button>
-                        <button className="btn btn-outline-secondary mx-3">
+                        <button className="btn btn-outline-secondary mx-3" id="opsel1">
                             Sign Up
                         </button>
                         </div>
