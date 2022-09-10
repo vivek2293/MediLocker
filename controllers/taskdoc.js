@@ -14,30 +14,21 @@ const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhf
 const CreateTaskDR =asyncWrapper(async (req, res, next) => {
   const { otp } = req.body
   const task = await Otp.findOne({ otp }).lean()
-  if (!task){
+  if (!task) {
     return next(createCustomError(`Invalid OTP`, 404))
-  }
-  else if(check){
-    return next(createCustomError(`Email id already present`, 404))
-  }
-    else{
-    const { name, email,docRegistration, password: plainTextPassword } = req.body
+  }else{
+    const Del= await Otp.findOneAndDelete({otp})
+    res.json({ Del })
+    const { name, email, password: plainTextPassword ,docRegistration} = req.body
     const password = await bcrypt.hash(plainTextPassword, 10)
-    // console.log(password) 
+    console.log(password) 
     const Create = async() => {
       try{
-        console.log(password)
-        console.log({
-          name,
-          email,
-          docRegistration,
-          password,
-        });
         const response = await Taskdoc.create({
           name,
           email,
-          docRegistration,
           password,
+          docRegistration
         })
         console.log('User created successfully: ', response)
       }
