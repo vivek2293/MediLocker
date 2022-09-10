@@ -9,12 +9,11 @@ import Register from "./components/Register";
 function App() {
   return (
     <>
-      <Navbar />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/login" element={<LoginOption message="Login" />} />
-        <Route exact path="/register" element={<LoginOption message="Register" />} />
-        <Route exact path="/register/patient" element={<Register />} />
+        <Route exact path="/" element={<><Navbar /><Home /></>} />
+        <Route exact path="/login" element={<><Navbar /><LoginOption message="Login" /></>} />
+        <Route exact path="/register" element={<><Navbar /><LoginOption message="Register" /></>} />
+        <Route exact path="/register/patient" element={<><Navbar /><Register /></>} />
       </Routes>
     </>
   );
