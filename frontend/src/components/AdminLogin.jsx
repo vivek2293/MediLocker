@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "./css/login.css";
-import loginImage from "../Resource/img/login.png";
+import "../css/login.css";
+import loginImage from "../resources/images/login.png";
 
 function Login() {
   const checkStatus = () => {
