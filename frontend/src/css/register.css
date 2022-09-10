@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 #registerSection{
     padding: 0;
     margin: 0;
@@ -10,6 +11,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#btnSubmit{
+    font-weight: bolder;
+    border-color: none;
+    color: #FFF5E4;
+    background-color: #2B7A78;
+}
+
+#btnSubmit:hover{
+    background-color: #FFF5E4;
+    color: #2B7A78;
 }
 
 #card{

@@ -100,7 +100,7 @@ const Register = () => {
                 <div className="card-body">
                   <div className="row my-1">
                     <div className="d-flex justify-content-center align-items-center my-2">
-                      <div className="fa fa-user-plus fa-2x me-2"></div>Sign-up
+                      <div className="fa fa-user-plus fa-2x me-2" id="top"></div>Sign-up
                     </div>
                   </div>
                   <div className="d-flex justify-content-center">

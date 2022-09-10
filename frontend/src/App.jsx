@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Home from "./components/Home";
+import About from "./components/About";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import LoginOption from "./components/LoginOption";
@@ -14,6 +15,7 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<><Navbar /><Home /></>} />
+        <Route exact path="/about" element={<><Navbar /><About /></>} />
         <Route exact path="/login" element={<><Navbar /><LoginOption message="Login" /></>} />
         <Route exact path="/login/patient" element={<><Navbar /><Login /></>} />
         <Route exact path="/login/doctor" element={<><Navbar /><AdminLogin /></>} />

@@ -11,18 +11,18 @@ function LoginOption(props) {
   console.log(address);
   return (
     <>
-      <section className="loginOption "  id = "login-option" style={sectionStyle}>
+      <section className="loginOption mt-5 py-5"  id = "login-option" style={sectionStyle}>
         <div
           className="container d-flex justify-content-center align-items-center"
-          style={{ height: "100vh" }} id="option-box"
+           id="option-box"
         >
-          <div className="card py-3 px-4 mt-4" id="optcard" style={{height:"39%"}}>
+          <div className="card py-3 px-4 mt-4" id="optcard">
             <h3 id = "whomsg" className="text-center display-md-6">
               Who Do You Want To {props.message} As?
             </h3>
             <hr id="card-line"/>
             <div className="row">
-            <div className="col-md-6 btnLayout d-flex p-1 justify-content-center align-items-center">
+            <div className="col-md-6 btnLayout d-flex p-5 justify-content-center align-items-center">
               <Link to={patientURL}>
                 <button
                   type="button"
