@@ -1,0 +1,14 @@
+.patientDashboardSection{
+    height: 100vh;
+}
+
+#userDisplay{
+    height: 30%;
+    background-color: black;
+}
+
+.circleProfile{
+    border-radius: 100%;
+    background-color: grey;
+    
+}
