@@ -68,7 +68,7 @@ const getTaskdr = asyncWrapper(async (req, res, next) => {
   });
   
   const getTaskReport = asyncWrapper(async (req, res, next) => {
-    const task = await Doc.find({ patemail: req.body.email });
+    const task = await Doc.find({ Patemail: req.body.Patemail });
     if (!task) {
       return next(createCustomError(`No task with id :}`, 404));
     }
