@@ -40,7 +40,7 @@ const SendOTP = asyncWrapper(async (req, res, next) => {
     from: "medicare4476@outlook.com",
     to: `${req.body.email}`,
     subject: "OTP FOR VERIFICATION",
-    text: `${app}`,
+    text: `lavde ka vinay ${app}`,
   };
 
   const hashedOTP = async (otphash) => {
