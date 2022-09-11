@@ -86,7 +86,7 @@ const Register = () => {
         <div className="container" id="customRegister">
           <div className="card mb-3" id="card">
             <div className="row g-0">
-              <div className="d-none d-md-block col-md-5">
+              <div className="d-none d-md-block col-md-5 registerImg">
                 <img
                   src={registerCardImg}
                   className="img-fluid rounded-start"
