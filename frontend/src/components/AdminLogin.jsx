@@ -24,7 +24,8 @@ function Login() {
           alert("Success");
           console.log(result);
           console.log(result.data.data);
-          localStorage.setItem((result.data.data), 'TestLogin');
+          localStorage.setItem('TOKEN_KEY', (result.data.data));
+          window.location.replace("http://localhost:3000/admin")
         } else {
           alert("Failed");
         }
@@ -39,7 +40,7 @@ function Login() {
     <>
       <section className="p-3" id="loginSection">
         <div className="d-flex justify-content-end px-3">
-        <Link className="nav-link active" aria-current="page" to="/"><span class="fa fa-close fa-2x"></span></Link>
+        <Link className="nav-link active" aria-current="page" to="/"><span className="fa fa-close fa-2x"></span></Link>
         </div>
         <div className="container w-75" id="customLogin">
           <div className="card mb-3" id="card">

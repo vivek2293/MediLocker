@@ -2,15 +2,19 @@ import axios from "axios";
 import React from "react";
 import '../css/admindashboard.css'
 import AdminSearch from "./AdminSearch";
+
 function searchByEmail() {
   const email = document.getElementById('email').value;
+  console.log({ Patemail: email });
   try {
-    axios.post('localhost:5000/report', { email_id: email });
+    axios.get('http://localhost:5000/report/dr', { Patemail: email })
+    .then(()=>console.log("success"))
+
   } catch (error) {
     console.log(error);
   }
-  console.log('ho gaya')
-}
+};
+
 function AdminDashboard(props) {
   const dashboardSection = {
     height: "100vh",
@@ -37,7 +41,7 @@ function AdminDashboard(props) {
           <div id="prescriptionCard" className="card px-3 py-3 mt-5 d-flex flex-column justify-content-center align-item-center">
             <div id='prescriptionText' className="text-center">No. of Prescriptions </div>
             <hr />
-            <div className="display-3 text-center"> {props.prescriptionNumber}333</div>
+            <div className="display-3 text-center"> {props.prescriptionNumber}56</div>
           </div>
         </div>
       

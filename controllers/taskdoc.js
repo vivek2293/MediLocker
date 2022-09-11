@@ -53,7 +53,7 @@ const getTaskdr = asyncWrapper(async (req, res, next) => {
   console.log(task.password);
   const check = await bcrypt.compare(password, task.password);
   console.log(check)
-  if (check) {
+  if(check) {
     const token = jwt.sign(
       {
         id: task._id,
