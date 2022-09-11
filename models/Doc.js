@@ -26,7 +26,7 @@ const DocSchema = new mongoose.Schema({
 
 
   Docid: {
-    type: number,
+    type: Number,
     required: [true, "must provide Docname"],
     trim: true,
   },
@@ -48,9 +48,8 @@ const DocSchema = new mongoose.Schema({
   },
 
 
-  URL: {
+  url: {
     type: String,
-    required: [true, "must provide Remark"],
     trim: true,
   },
 

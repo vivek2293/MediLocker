@@ -22,7 +22,7 @@ const{
 
 router.route('/').post(CreateTask)
 
-router.route('/report/doc').post(CreateReport).get(getTaskReport)
+router.route('/report/dr').post(CreateReport).get(getTaskReport)
 
 router.route('/report/pat').get(getReport)
 
