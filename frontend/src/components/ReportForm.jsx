@@ -1,10 +1,28 @@
-// import axios from "axios";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {useState} from "react";
+import {storage} from '../../src/firebase';
+import {getDownloadURL, ref, uploadBytesResumable} from '@firebase/storage';
 import registerCardImg from "../resources/images/registerCardImg.png";
 import "../css/register.css";
 
 const ReportForm = () => {
+  const [progress ,Setprogress] = useState(0);
+  
+  const handleSubmit = () => {
+    const file = document.getElementById('upload').files[0]
+      if(!file) return;
+      const storageRef = ref(storage, `/files/${file.name}`);
+      const uploadTask = uploadBytesResumable(storageRef,file);
+
+      uploadTask.on("state_changed", (snapshot) => {
+          const progress = Math.round(snapshot.bytesTransferred/snapshot.totalBytes)*100;
+          console.log(progress)
+          Setprogress(progress);
+      }, (err) => console.log(err), () => {
+          getDownloadURL(uploadTask.snapshot.ref)
+          .then(url => console.log(url));
+      });
+  }
+
   return (
     <>
       <section className="p-3" id="registerSection">
@@ -103,19 +121,37 @@ const ReportForm = () => {
                     <form className="d-flex justify-content-center">
                       <div className="form-floating col-md-10 my-2">
                         <textarea
-                          class="form-control"
+                          className="form-control"
                           placeholder="Leave a comment here"
                           id="prescription"
                           style={{ height: "100px" }}
                         ></textarea>
-                        <label for="prescription">Prescription</label>
+                        <label htmlFor="prescription">Prescription</label>
                       </div>
                     </form>
-                    <div className="col-12 my-1 d-flex justify-content-around">
+                    <div className="col-md-10 my-2">
+                      <label htmlFor="upload" className="form-label">
+                        Report: <span className="text-muted">(if any)</span>
+                      </label>
+                      <input
+                        type="file"
+                        className="form-control"
+                        id="upload"
+                        required
+                      />
+                    </div>
+                    <div className="col-md-10 my-2">
+                    <span className="text-muted">Uploading {progress}%</span>
+                    <div className="progress">
+                      <div className="progress-bar" role="progressbar" style={{width: `${progress}%`, ariaValuenow: "0", ariaValuemin: "0", ariaValuemax: "100"}}>{progress}</div>
+                    </div>
+                    </div>
+                    <div className="col-12 mt-3 mb-1 d-flex justify-content-around">
                       <button
                         className="btn btn-secondary"
                         type="button"
                         id="btnSubmit"
+                        onClick={handleSubmit}
                       >
                         Submit
                       </button>

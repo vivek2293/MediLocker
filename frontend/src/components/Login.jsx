@@ -76,9 +76,11 @@ function Login() {
                       >
                         Login
                       </button>
-                      <button className="btn btn-outline-secondary mx-3" id="opsel1" >
-                        Sign Up
-                      </button>
+                      <Link to="/register">
+                        <button className="btn btn-outline-secondary mx-3" id="opsel1" >
+                          Sign Up
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

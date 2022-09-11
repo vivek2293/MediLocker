@@ -3,29 +3,30 @@
 }
 
 #navbarclr{
-    background-color: #17252A;
+    background-color: #BC6FF1;
     /* font-size: larger; */
     padding: 0.7rem;
     /* opacity: 0.8; */
 }
 
 #navbtnclr{
-    color: #DEF2F1;
-    font-weight: bolder;
-    font-size: large;
-    padding-right: 0.5rem;
+    /* color: #000000; */
+    color: white;
+    /* font-weight: bolder; */
+    /* font-size: small; */
+    padding-right: 2rem;
 }
 
 #loginbtnclr{
-    color: #FFF5E4;
-    background-color: #2B7A78;
+    color: #DCD6F7;
+    background-color: #091ba2;
     font-weight: bold;
     border: none;
 }
 
 #loginbtnclr:hover{
-    background-color: #FFF5E4;
-    color: #2B7A78;
+    background-color: #DCD6F7;
+    color: #091ba2;
     /* background-color:#857770;
     color: #f3eae8; */
     /* font-weight: 800; */

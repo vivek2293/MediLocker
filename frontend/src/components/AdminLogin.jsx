@@ -42,7 +42,7 @@ function Login() {
                 <div className="col-md-7">
                     <div className="card-body">
                     <h5 className="card-title text-center py-4 display-6 fw-bold">
-                        ADMIN LOGIN
+                        DOCTOR LOGIN
                     </h5>
                     <div className="row g-3 d-flex justify-content-center">
                         <div className="col-md-8 py-1">
@@ -87,9 +87,11 @@ function Login() {
                         >
                             Login
                         </button>
+                        <Link to="/register">
                         <button className="btn btn-outline-secondary mx-3" id="opsel1">
                             Sign Up
                         </button>
+                        </Link>
                         </div>
                     </div>
                     </div>

@@ -151,7 +151,7 @@ const AdminRegister = () => {
                 <div className="card-body">
                   <div className="row my-1">
                     <div className="d-flex justify-content-center align-items-center my-2">
-                      <div className="fa fa-user-plus fa-2x me-2"></div>Admin
+                      <div className="fa fa-user-plus fa-2x me-2"></div>DOCTOR
                       Sign-up
                     </div>
                   </div>
@@ -167,6 +167,7 @@ const AdminRegister = () => {
                         type="text"
                         className="form-control"
                         id="name"
+                        placeholder="(As per IMR register)"
                         required
                       />
                     </div>
@@ -178,6 +179,7 @@ const AdminRegister = () => {
                         type="text"
                         className="form-control"
                         id="docRegistration"
+                        placeholder="(As per IMR register)"
                         required
                       />
                     </div>
