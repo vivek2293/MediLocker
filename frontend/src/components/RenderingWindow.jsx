@@ -5,7 +5,7 @@ function RenderingWindow(props) {
   return (
     <>
         <section>
-            {{ props }.map((patient) => SingleRecord({ patient }))}
+            {{ props }.map((patient) => <SingleRecord props={ patient } />)}
         </section>
     </>
   );
