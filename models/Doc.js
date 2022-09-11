@@ -1,14 +1,11 @@
 const mongoose = require("mongoose");
 
 const DocSchema = new mongoose.Schema({
-
-    
   Patname: {
     type: String,
     required: [true, "must provide Patname"],
     trim: true,
-  },    
-
+  },
 
   Patemail: {
     type: String,
@@ -16,14 +13,11 @@ const DocSchema = new mongoose.Schema({
     trim: true,
   },
 
-
-
   Docname: {
     type: String,
     required: [true, "must provide Docname"],
     trim: true,
   },
-
 
   Docid: {
     type: Number,
@@ -31,15 +25,11 @@ const DocSchema = new mongoose.Schema({
     trim: true,
   },
 
-
-
   Hosname: {
     type: String,
     required: [true, "must provide Hosname"],
     trim: true,
   },
-
-
 
   Remarks: {
     type: String,
@@ -47,37 +37,32 @@ const DocSchema = new mongoose.Schema({
     trim: true,
   },
 
-
   url: {
     type: String,
     trim: true,
   },
 
-
   Object: {
     type: Object,
     required: [true, "must provide Prescribed"],
-    Prescription:{
+    Prescription: {
       type: String,
       required: true,
     },
-    Disease:{
+    Disease: {
       type: String,
       required: true,
     },
   },
-
 
   Date: {
     type: String,
-    default:(new Date()).toLocaleDateString()
+    default: new Date().toLocaleDateString(),
   },
-
-
 
   Time: {
     type: String,
-    default:(new Date()).toLocaleTimeString()
+    default: new Date().toLocaleTimeString(),
   },
 });
 
