@@ -5,19 +5,18 @@ const Otp = require('../models/otp')
 const { createCustomError } = require('../errors/custom-error')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
-
-const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
+require('dotenv').config();
 
 
 
 
 const CreateTaskDR =asyncWrapper(async (req, res, next) => {
   const { otp } = req.body
-  const task = await Otp.findOne({ otp }).lean()
-  if (!task) {
-    return next(createCustomError(`Invalid OTP`, 404))
+  const task1 = await Otp.findOne({ email:req.body.email }).lean()
+  if (!await bcrypt.compare(req.body.otp, task1.otp)){
+		return next(createCustomError(`Invalid OTP`, 404))
   }else{
-    const Del= await Otp.findOneAndDelete({otp})
+    const Del= await Otp.findOneAndDelete({ email:req.body.email })
     res.json({ Del })
     const { name, email, password: plainTextPassword ,docRegistration} = req.body
     const password = await bcrypt.hash(plainTextPassword, 10)
@@ -42,7 +41,6 @@ const CreateTaskDR =asyncWrapper(async (req, res, next) => {
 })
 
 const getTaskReport = asyncWrapper(async (req, res, next) => {
-  // console.log(req.body.Patemail)
   const task = await Doc.find({ patemail: req.body.email })
   if (!task) {
     return next(createCustomError(`No task with id :}`, 404))
@@ -71,7 +69,7 @@ const getTaskdr = asyncWrapper(async (req, res, next) => {
 				name: task.name,
 				docid: task.docRegistration
 			},
-			JWT_SECRET
+			process.env.JWT_SECRET
 		)
 
     return res.json({ task })

@@ -1,7 +1,9 @@
 import React from "react";
 import "../css/home.css";
+import Carousel from "./Carousel";
 import HomeScreen1 from "./HomeScreen1";
 import ParticlesBg from "./ParticlesBg";
+import Review from "./Review";
 function Home() {
   return (
     <>
@@ -13,10 +15,24 @@ function Home() {
           </div>
         </section>
         <section className="snapSection">
-          <div className="coverScreen">Two</div>
+          <div className="coverScreen pt-5 d-flex flex-column justify-content-center">
+            <Carousel/>
+          </div>
         </section>
         <section className="snapSection">
-          <div className="coverScreen">Three</div>
+          <div className="coverScreen d-flex align-items-center py-5">
+            <div className="row justify-content-around mt-5">
+              <div className="col-md-5">
+                <Review />
+              </div>
+              <div className="col-md-5">
+                <Review />
+              </div>
+              <div className="col-md-5">
+                <Review />
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </>

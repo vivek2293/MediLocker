@@ -1,0 +1,21 @@
+.card {
+    border: none;
+    margin: auto;
+    margin-bottom: 3vh;
+    /* max-width: 90%; */
+    opacity: 0.9;
+    transition: transform 350ms ease;
+}
+
+.card:hover {
+    transform: scale(1.04);
+}
+
+.card-body{
+    color: rgb(36, 47, 155);
+}
+
+#demo{
+    color: rgb(36, 47, 155);
+    font-size: larger;
+}
