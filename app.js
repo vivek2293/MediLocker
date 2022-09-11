@@ -6,9 +6,6 @@ const connectDB = require('./db/connect');
 require('dotenv').config();
 const notFound = require('./middleware/not-found');
 const errorHandlerMiddleware = require('./middleware/error-handler');
-const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt')
-const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
 // middleware
 
 app.use(cors())
