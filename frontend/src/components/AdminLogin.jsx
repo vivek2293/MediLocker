@@ -8,8 +8,10 @@ function Login() {
   const checkStatus = () => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const docRegistration = document.getElementById("docId").value;
     const data = {
       email: email,
+      docRegistration: docRegistration,
       password: password,
     };
 
@@ -17,9 +19,12 @@ function Login() {
 
     const verification = async () => {
       try {
-        const result = await axios.post("http://localhost:5000/login", data);
-        if (result.status === "ok") {
+        const result = await axios.post("http://localhost:5000/login/dr", data);
+        if (result.status === 200) {
           alert("Success");
+          console.log(result);
+          console.log(result.data.data);
+          localStorage.setItem((result.data.data), 'TestLogin');
         } else {
           alert("Failed");
         }

@@ -21,7 +21,8 @@ function App() {
     <>
       <Routes>
         <Route exact path="/" element={<><Navbar /><Home /></>} />
-        <Route exact path="/user" element={<><PatientDashboard /></>} />
+        {/* <Route exact path="/user" element={<><Protected Component= {PatientDashboard}/></>} /> */}
+        <Route exact path="/user" element={<><PatientDashboard/></>} />
         <Route exact path="/patientView" element={<><PatientView /></>} />
         <Route exact path="/admin" element={<><AdminDashboard /></>} />
         <Route exact path="/about" element={<><Navbar /><Protected Component ={About}/></>} />
