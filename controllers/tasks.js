@@ -6,8 +6,9 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 
 const CreateTask =asyncWrapper(async (req, res, next) => {
-  const { otp } = req.body
+  // const { otp } = req.body
   const task1 = await Otp.findOne({ email:req.body.email }).lean()
+  console.log()
   if (!await bcrypt.compare(req.body.otp, task1.otp)){
 		return next(createCustomError(`Invalid OTP`, 404))
   }else{
@@ -51,7 +52,7 @@ const getTask = asyncWrapper(async (req, res, next) => {
 			},
 			process.env.JWT_SECRET
 		)
-    return res.json({ status: 'ok', data: token })
+    return res.json({ status: 'ok', data: token , task})
   }
 })
 

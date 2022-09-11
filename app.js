@@ -1,20 +1,20 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const cors = require('cors');
-const tasks = require('./routes/tasks');
-const connectDB = require('./db/connect');
-require('dotenv').config();
-const notFound = require('./middleware/not-found');
-const errorHandlerMiddleware = require('./middleware/error-handler');
+const cors = require("cors");
+const tasks = require("./routes/tasks");
+const connectDB = require("./db/connect");
+require("dotenv").config();
+const notFound = require("./middleware/not-found");
+const errorHandlerMiddleware = require("./middleware/error-handler");
 // middleware
 
-app.use(cors())
+app.use(cors());
 // app.use(express.static('./public'));
 app.use(express.json());
 
 // routes
 
-app.use('/', tasks);
+app.use("/", tasks);
 
 app.use(notFound);
 app.use(errorHandlerMiddleware);

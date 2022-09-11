@@ -15,6 +15,7 @@ import PatientDashboard from "./components/PatientDashboard";
 import PatientView from "./components/PatientView";
 import AdminDashboard from "./components/AdminDashboard";
 import ReportForm from "./components/ReportForm";
+import Protected from "./components/Protected";
 
 function App() {
   return (
@@ -24,8 +25,12 @@ function App() {
         <Route exact path="/user" element={<><PatientDashboard /></>} />
         <Route exact path="/patientView" element={<><PatientView /></>} />
         <Route exact path="/admin" element={<><AdminDashboard /></>} />
+<<<<<<< HEAD
         <Route exact path="/about" element={<><Navbar /><About /></>} />
         <Route exact path="/faq" element={<><Navbar /><Faq /></>} />
+=======
+        <Route exact path="/about" element={<><Navbar /><Protected Component ={About}/></>} />
+>>>>>>> 55dbe536449957c24f3bebf3bbaeb6a1d1804d3e
         <Route exact path="/login" element={<><Navbar /><LoginOption message="Login" /></>} />
         <Route exact path="/login/patient" element={<><Navbar /><Login /></>} />
         <Route exact path="/login/doctor" element={<><Navbar /><AdminLogin /></>} />
