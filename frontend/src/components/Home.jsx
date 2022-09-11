@@ -3,7 +3,7 @@ import "../css/home.css";
 import Carousel from "./Carousel";
 import HomeScreen1 from "./HomeScreen1";
 import ParticlesBg from "./ParticlesBg";
-import Review from "./Review";
+import Rev from "./Review";
 function Home() {
   return (
     <>
@@ -23,13 +23,13 @@ function Home() {
           <div className="coverScreen d-flex align-items-center py-5">
             <div className="row justify-content-around mt-5">
               <div className="col-md-5">
-                <Review />
+                <Rev.Review />
               </div>
               <div className="col-md-5">
-                <Review />
+                <Rev.Review1 />
               </div>
               <div className="col-md-5">
-                <Review />
+                <Rev.Review2 />
               </div>
             </div>
           </div>

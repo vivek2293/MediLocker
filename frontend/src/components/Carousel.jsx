@@ -1,6 +1,10 @@
 import React from "react";
 import "../css/carousel.css"
-import loginImage from '../resources/images/login.png'
+import lock from '../resources/images/lock.jpg'
+import ipad from '../resources/images/ipad.jpg'
+import connecth from '../resources/images/connect.jpg'
+import docphone from '../resources/images/docphone.jpg'
+import patient from '../resources/images/patient.jpg'
 
 function Carousel() {
     return (
@@ -20,38 +24,38 @@ function Carousel() {
                 </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active" data-bs-interval="1000">
-                        <img src={loginImage} className="d-block w-100 i-carousel" alt="1"/>
+                        <img src={ipad} className="d-block w-100 i-carousel" alt="1"/>
                             <div className="carousel-caption d-none d-md-block">
-                                <h5>Bon Appétit</h5>
-                                <p>Special flavors forged from Chef's Hand.</p>
+                                <h5>Access to doctors</h5>
+                                <p>Medical history easily accessible.</p>
                             </div>
                     </div>
                     <div className="carousel-item" data-bs-interval="1000">
-                        <img src={loginImage}  className="d-block w-100 i-carousel" alt="2"/>
+                        <img src={docphone}  className="d-block w-100 i-carousel" alt="2"/>
                             <div className="carousel-caption d-none d-md-block">
-                                <h5>Cherishing Food</h5>
-                                <p>Tantalize your taste buds with Delicious Indian Cuisine.</p>
+                                <h5>Data on fingertips</h5>
+                                <p>Data can be accesses on any device.</p>
                             </div>
                     </div>
                     <div className="carousel-item" data-bs-interval="1000">
-                        <img src={loginImage}  className="d-block w-100 i-carousel" alt="3"/>
+                        <img src={lock}  className="d-block w-100 i-carousel" alt="3"/>
                             <div className="carousel-caption d-none d-md-block">
-                                <h5>Romaticizing experience</h5>
-                                <p>Blend yourself with Meticulous and Romantic ambience.</p>
+                                <h5>Fully Authenticated</h5>
+                                <p>No one can Trespass through the system .</p>
                             </div>
                     </div>
                     <div className="carousel-item" data-bs-interval="1000">
-                        <img src={loginImage}  className="d-block w-100 i-carousel" alt="4"/>
+                        <img src={connecth}  className="d-block w-100 i-carousel" alt="4"/>
                             <div className="carousel-caption d-none d-md-block">
-                                <h5>Heavenly Satisfaction</h5>
-                                <p>Pipin' hot food to satisy your tastebuds.</p>
+                                <h5>Ease of access</h5>
+                                <p>Data can be acceses even in case of any disaster.</p>
                             </div>
                     </div>
                     <div className="carousel-item" data-bs-interval="1000">
-                        <img src={loginImage}  className="d-block w-100 i-carousel" alt="5"/>
+                        <img src={patient}  className="d-block w-100 i-carousel" alt="5"/>
                             <div className="carousel-caption d-none d-md-block">
-                                <h5>Leisurely Brunch</h5>
-                                <p>Delicious Brunch served all day long.</p>
+                                <h5>Digitized Prescription</h5>
+                                <p>Prescription can be accessed and uploaded digitally.</p>
                             </div>
                     </div>
                 </div>

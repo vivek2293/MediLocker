@@ -25,8 +25,8 @@ function App() {
         {/* <Route exact path="/user" element={<><Protected Component= {PatientDashboard}/></>} /> */}
         <Route exact path="/user" element={<><PatientDashboard/></>} />
         <Route exact path="/patientView" element={<><PatientView /></>} />
-        <Route exact path="/admin" element={<><AdminDashboard /></>} />
-        <Route exact path="/about" element={<><Navbar /><Protected Component ={About}/></>} />
+        <Route exact path="/admin" element={<><Protected Component={AdminDashboard} /></>} />
+        <Route exact path="/about" element={<><Navbar /><About/></>} />
         <Route exact path="/login" element={<><Navbar /><LoginOption message="Login" /></>} />
         <Route exact path="/faq" element={<><Navbar /><Faq /></>} />
         <Route exact path="/login/patient" element={<><Navbar /><Login /></>} />
