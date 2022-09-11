@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/patientdashboard.css";
+import RenderingWindow from "./RenderingWindow";
 
 function PatientDashboard(props) {
   return (
@@ -20,7 +21,9 @@ function PatientDashboard(props) {
             </div>
           </div>
         </div>
-        <div className="row" id="renderingWindow"></div>
+        <div className="row" id="renderingWindow">
+          <RenderingWindow />
+        </div>
       </section>
     </>
   );
