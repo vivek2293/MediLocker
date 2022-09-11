@@ -7,29 +7,24 @@ function Faq() {
       <section className='py-5' id="faqSection">
         <div className="container my-5 d-flex flex-column">
           <div className="card p-2 my-2 w-75 mainCard">
-            <h5 className='fw-bold'>Question Template structure 1?</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus consequuntur labore nam atque? Repudiandae nulla illo, excepturi nesciunt consectetur saepe exercitationem eveniet omnis, alias inventore at ratione explicabo quia optio.
-            Expedita provident nulla molestiae facere eligendi voluptas error possimus quae odio placeat! Recusandae quam ipsam ab neque incidunt laborum, dolore facere animi magni, nostrum harum excepturi aliquam, impedit similique quos?</p>
+            <h5 className='fw-bold'>Can I use the website on phone?</h5>
+            <p>Hello Sir/Madam, Our app is compatible with all types of device . So you can use it on your phone as well as any other device.</p>
           </div>
           <div className="card p-2 my-2 w-75 mainCard">
-            <h5 className='fw-bold'>Question Template structure 2?</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus consequuntur labore nam atque? Repudiandae nulla illo, excepturi nesciunt consectetur saepe exercitationem eveniet omnis, alias inventore at ratione explicabo quia optio.
-            Expedita provident nulla molestiae facere eligendi voluptas error possimus quae odio placeat! Recusandae quam ipsam ab neque incidunt laborum, dolore facere animi magni, nostrum harum excepturi aliquam, impedit similique quos?</p>
+            <h5 className='fw-bold'>How do I register on the website?</h5>
+            <p>Hello Sir/Madam, To register you can see the blue dialog box on the right side in the navigation bar saying "Register". Click there and select patient or doctor as per your choice. </p>
           </div>
           <div className="card p-2 my-2 w-75 mainCard">
-            <h5 className='fw-bold'>Question Template structure 3?</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus consequuntur labore nam atque? Repudiandae nulla illo, excepturi nesciunt consectetur saepe exercitationem eveniet omnis, alias inventore at ratione explicabo quia optio.
-            Expedita provident nulla molestiae facere eligendi voluptas error possimus quae odio placeat! Recusandae quam ipsam ab neque incidunt laborum, dolore facere animi magni, nostrum harum excepturi aliquam, impedit similique quos?</p>
+            <h5 className='fw-bold'>Can the PDF file of the reports be uploaded?</h5>
+            <p>Hello Sir/Madam, Y0u can upload the pdf files of the reports . It will be stored safely with us.</p>
           </div>
           <div className="card p-2 my-2 w-75 mainCard">
-            <h5 className='fw-bold'>Question Template structure 4?</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus consequuntur labore nam atque? Repudiandae nulla illo, excepturi nesciunt consectetur saepe exercitationem eveniet omnis, alias inventore at ratione explicabo quia optio.
-            Expedita provident nulla molestiae facere eligendi voluptas error possimus quae odio placeat! Recusandae quam ipsam ab neque incidunt laborum, dolore facere animi magni, nostrum harum excepturi aliquam, impedit similique quos?</p>
+            <h5 className='fw-bold'>Is the website secure?</h5>
+            <p>Hello Sir/Madam, Our website is fully secured . Your data is well Authenthicated and encrypted with us so you don't need to worry.</p>
           </div>
           <div className="card p-2 my-2 w-75 mainCard">
-            <h5 className='fw-bold'>Question Template structure 5?</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus consequuntur labore nam atque? Repudiandae nulla illo, excepturi nesciunt consectetur saepe exercitationem eveniet omnis, alias inventore at ratione explicabo quia optio.
-            Expedita provident nulla molestiae facere eligendi voluptas error possimus quae odio placeat! Recusandae quam ipsam ab neque incidunt laborum, dolore facere animi magni, nostrum harum excepturi aliquam, impedit similique quos?</p>
+            <h5 className='fw-bold'>Can I still access the data in case of any disaster?</h5>
+            <p>Hello Sir/Madam, Your data is safely stored in the Cloud so you will still be able to access your data in case of any disaster.</p>
           </div>
         </div>
       </section>
