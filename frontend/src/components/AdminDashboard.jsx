@@ -1,12 +1,15 @@
 import axios from "axios";
 import React from "react";
-function searchByEmail(){
-    const email=document.getElementById('email').value;
-    try {
-        axios.post('localhost:5000/report',{email_id: email});
-    } catch (error){
-        console.log(error);
-    }
+import '../css/admindashboard.css'
+import AdminSearch from "./AdminSearch";
+function searchByEmail() {
+  const email = document.getElementById('email').value;
+  try {
+    axios.post('localhost:5000/report', { email_id: email });
+  } catch (error) {
+    console.log(error);
+  }
+  console.log('ho gaya')
 }
 function AdminDashboard(props) {
   const dashboardSection = {
@@ -24,32 +27,22 @@ function AdminDashboard(props) {
         className="dashboardSection row align-items-center"
         style={dashboardSection}
       >
-        <div className="container justify-content-center  col-9">
-          <div className="helloPrompt text-center">
-            <h3 className="display-4 fw-bold mb-3">Hello Dr.{props.name}Vivek !</h3>
-            <p className="mx-5 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem accusamus quia eos quos corrupti quas sit! Quaerat hic aspernatur, impedit totam debitis delectus beatae accusamus atque tenetur, at, laborum ad!</p>
+        <div className="col-md-3 d-flex flex-column justify-content-start align-items-center" style={docInfoSection} id='profileSection'>
+          <svg height="150" width="150">
+            <circle cx="70" cy="70" r="55" fill="grey" />
+          </svg>
+          <h4 className="fw-bold display-6 text-center">{props.name}Vivek Kumar</h4>
+          <h6 className=" mutedInfo">{props.email}vivek_k69@gmail.com</h6>
+          <h6 className=" mutedInfo">IMR : {props.imr}104110</h6>
+          <div id="prescriptionCard" className="card px-3 py-3 mt-5 d-flex flex-column justify-content-center align-item-center">
+            <div id='prescriptionText' className="text-center">No. of Prescriptions </div>
+            <hr />
+            <div className="display-3 text-center"> {props.prescriptionNumber}333</div>
           </div>
-          <form class="d-flex justify-content-center mt-2" role="search">
-            <input
-              class="me-2 rounded-pill col-5 text-center p-2"
-              type="email"
-              placeholder="Search Patient by Email ID"
-              aria-label="Search"
-              id="email"
-            />
-            <button
-              class="btn btn-outline-success rounded-pill col-2 p-2 fw-bold fs-5"
-              type="submit"
-              onClick={searchByEmail}
-            >
-              Search
-            </button>
-          </form>
         </div>
-        <div className="col-3 bg-primary" style={docInfoSection}>
-          {/* <button>info</button> */}
+      
+        <AdminSearch name="Vivek" searchByEmail={searchByEmail} />
 
-        </div>
       </section>
     </>
   );
