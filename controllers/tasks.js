@@ -7,9 +7,6 @@ const bcrypt = require('bcrypt')
 
 const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
 
-
-
-
 const CreateTask =asyncWrapper(async (req, res, next) => {
   const { otp } = req.body
   const task = await Otp.findOne({ otp }).lean()
@@ -26,7 +23,7 @@ const CreateTask =asyncWrapper(async (req, res, next) => {
         const response = await Task.create({
           name,
           email,
-          password,
+          password
         })
         console.log('User created successfully: ', response)
       }
@@ -38,8 +35,6 @@ const CreateTask =asyncWrapper(async (req, res, next) => {
     res.json({ status: 'ok' })
     }
 })
-
-
 
 
 const getTask = asyncWrapper(async (req, res, next) => {
@@ -70,7 +65,6 @@ const getReport = asyncWrapper(async (req, res, next) => {
   }
   res.status(200).json({ task })
 })
-
 
 
 module.exports = {
