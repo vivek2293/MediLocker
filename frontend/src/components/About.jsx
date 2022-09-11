@@ -7,7 +7,7 @@ function About() {
         <div className="container d-flex flex-column align-items-center">
           <h3 className="text-center w-50">
             Our Project Aims At Creating A More Efficient Communication Between
-            Patient And Doctors And Also To Help People Maintain Well Documented
+            Patients And Doctors And Also To Help People Maintain Well Documented
             Medical Records Of Their Own.
           </h3>
           <h4 className="mt-5 fw-bold" style={{color:"#DEF2F1"}}>
