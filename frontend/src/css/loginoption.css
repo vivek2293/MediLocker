@@ -27,6 +27,7 @@
   background-color: #BC6FF1;
   color: black;
   font-size: xx-large;
+  /* transform: scale(1.05); */
   /* color: black; */
 }
 
@@ -39,7 +40,7 @@
   background-color: #892CDC;
   padding-top: 3rem;
   padding-bottom: 4rem;
-  height: 80%;
+  /* height: 80%; */
   border: none;
   border-radius: 1.2rem;
 }
