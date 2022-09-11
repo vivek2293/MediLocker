@@ -10,5 +10,9 @@
 .circleProfile{
     border-radius: 100%;
     background-color: grey;
-    
+
+}
+
+#profileName{
+    color:white
 }
