@@ -27,16 +27,21 @@ function AdminDashboard(props) {
         className="dashboardSection row align-items-center"
         style={dashboardSection}
       >
-        <div className="col-md-3 bg-primary d-flex flex-column justify-content-start align-items-center" style={docInfoSection} id='profileSection'>
+        <div className="col-md-3 d-flex flex-column justify-content-start align-items-center" style={docInfoSection} id='profileSection'>
           <svg height="150" width="150">
             <circle cx="70" cy="70" r="55" fill="grey" />
           </svg>
-          <h4>{props.name}Vivek Kumar</h4>
-          <h6 className="text-muted">{props.email}vivek_k69@gmail.com</h6>
-          <h6 className="text-muted">IMR : {props.imr}104110</h6>
-
+          <h4 className="fw-bold display-6 text-center">{props.name}Vivek Kumar</h4>
+          <h6 className=" mutedInfo">{props.email}vivek_k69@gmail.com</h6>
+          <h6 className=" mutedInfo">IMR : {props.imr}104110</h6>
+          <div id="prescriptionCard" className="card px-3 py-3 mt-5 d-flex flex-column justify-content-center align-item-center">
+            <div id='prescriptionText' className="text-center">No. of Prescriptions </div>
+            <hr />
+            <div className="display-3 text-center"> {props.prescriptionNumber}333</div>
+          </div>
         </div>
-        <AdminSearch name="Vivek" searchByEmail={searchByEmail}/>
+      
+        <AdminSearch name="Vivek" searchByEmail={searchByEmail} />
 
       </section>
     </>

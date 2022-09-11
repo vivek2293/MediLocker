@@ -3,3 +3,27 @@
         max-height: 70vh;
     }
 }
+
+.dashboardSection{
+    background-color: #DCD6F7;
+}
+
+#profileSection{
+    background-color: #424874;
+    color: #F4EEFF;
+}
+
+.mutedInfo{
+    color: #FFC288;
+    opacity: 0.8;
+}
+
+#prescriptionCard{
+    background-color: #FEA82F;
+
+}
+
+#prescriptionText{
+    color: black;
+    font-weight: bold;
+}

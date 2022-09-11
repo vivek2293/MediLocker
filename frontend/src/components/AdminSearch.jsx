@@ -1,12 +1,12 @@
 import React from "react";
-
+import '../css/adminsearch.css';
 function AdminSearch(props) {
     return (
         <>
-            <div className="container justify-content-center col-md-9">
-                <div className="helloPrompt text-center">
+            <div className="container justify-content-center col-md-9" id="srchcont">
+                <div className="helloPrompt text-center d-flex flex-column align-items-center">
                     <h3 className="display-md-4 fw-bold mb-3">Hello Dr.{props.name} !</h3>
-                    <p className="mx-md-5 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem accusamus quia eos quos corrupti quas sit! Quaerat hic aspernatur, impedit totam debitis delectus beatae accusamus atque tenetur, at, laborum ad!</p>
+                    <p className="mx-md-5 mb-5 w-50">You can search any patient using them email id and provide them with a prescription or check their medical history.</p>
                 </div>
                 <div class="d-flex justify-content-center my-4">
                     <input
@@ -17,8 +17,8 @@ function AdminSearch(props) {
                         id="email"
                     />
                     <button
-                        class="btn btn-outline-success rounded-pill col-md-2 p-2 fw-bold fs-md-5"
-                        type="submit"
+                        class="btn rounded-pill col-md-2 p-2 fw-bold fs-md-5"
+                        type="submit" id="srchbtnad"
                         onClick={props.searchByEmail}
                     >
                         Search

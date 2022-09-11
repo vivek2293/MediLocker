@@ -1,0 +1,17 @@
+#srchcont {
+    background-color: #DCD6F7;
+}
+
+#srchbtnad {
+    border: none;
+    color: #252945;
+    font-size: large;
+    background: rgb(207, 129, 231);
+    background: linear-gradient(75deg, rgba(207, 129, 231, 1) 0%, rgba(63, 96, 238, 1) 100%);
+    transition-duration: 2s;
+}
+
+#srchbtnad:hover {
+    background: rgb(207, 129, 231);
+    background: linear-gradient(180deg, rgba(207, 129, 231, 1) 0%, rgba(63, 96, 238, 1) 100%);
+}
