@@ -50,12 +50,7 @@ function PatientDashboard(props) {
               <SingleRecord props={patient} />
             </div>
           ))}
-
-          {/* {props.map((patient) => (
-            <div key={patient.id}>
-              <SingleRecord props={props} />
-            </div>
-          ))} */}
+          {/* <RenderingWindow props={props.records}/> */}
         </div>
       </section>
     </>
