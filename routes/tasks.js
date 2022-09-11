@@ -1,29 +1,37 @@
-const express = require("express");
-const router = express.Router();
-
-const { CreateTask, getTask, getReport } = require("../controllers/tasks");
+const express = require('express')
+const router = express.Router()
 
 const {
+  CreateTask,
+  getTask,
+  getReport
+
+} = require('../controllers/tasks')
+
+const{
   CreateTaskDR,
   getTaskdr,
   CreateReport,
-  getTaskReport,
-} = require("../controllers/taskdoc");
+  getTaskReport
+}= require('../controllers/taskdoc')
 
-const { SendOTP } = require("../nodemailer.js");
 
-router.route("/").post(CreateTask);
+const{
+  SendOTP
+}= require('../nodemailer.js')
 
-router.route("/report/dr").post(CreateReport).get(getTaskReport);
+router.route('/').post(CreateTask)
 
-router.route("/report/pat").get(getReport);
+router.route('/report/dr').post(CreateReport).get(getTaskReport)
 
-router.route("/login").post(getTask);
+router.route('/report/pat').get(getReport)
 
-router.route("/signup/dr").post(CreateTaskDR);
+router.route('/login').post(getTask)
 
-router.route("/login/dr").post(getTaskdr);
+router.route('/signup/dr').post(CreateTaskDR)
 
-router.route("/signup/otp").post(SendOTP);
+router.route('/login/dr').post(getTaskdr)
 
-module.exports = router;
+router.route('/signup/otp').post(SendOTP)
+
+module.exports = router
