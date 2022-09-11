@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./components/Home";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
+import Faq from "./components/Faq";
 import { Routes, Route } from "react-router-dom";
 import LoginOption from "./components/LoginOption";
 import Register from "./components/Register";
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/patientView" element={<><PatientView /></>} />
         <Route exact path="/admin" element={<><AdminDashboard /></>} />
         <Route exact path="/about" element={<><Navbar /><About /></>} />
+        <Route exact path="/faq" element={<><Navbar /><Faq /></>} />
         <Route exact path="/login" element={<><Navbar /><LoginOption message="Login" /></>} />
         <Route exact path="/login/patient" element={<><Navbar /><Login /></>} />
         <Route exact path="/login/doctor" element={<><Navbar /><AdminLogin /></>} />
