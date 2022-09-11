@@ -19,7 +19,8 @@
 .coverScreen{
     z-index: 56;
     color: aliceblue;
-    height: 100%;
+    height: 100vh;
     width: 100%;
-    background-color:rgba(37, 31, 31, 0.2);
+    background-color:rgba(37, 31, 31, 0.05);
+    margin: 0px 0px;
 }
