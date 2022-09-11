@@ -41,7 +41,7 @@ const Navbar = () => {
             </ul>
             <form className="d-flex" role="search">
               <Link className="nav-link" to="/login">
-                <button id = "loginbtnclr" className="btn btn-outline-primary rounded-pill ms-auto">
+                <button id = "loginbtnclr1" className="btn btn-outline-primary rounded-pill ms-auto">
                   <i className="fa fa-sign-in me-2"></i>Login
                 </button>
               </Link>
