@@ -67,7 +67,10 @@ const Register = () => {
       try {
         await axios
           .post("http://localhost:5000/", info)
-          .then(() => console.log("success"));
+          .then(() => {
+            console.log("success");
+            window.location.replace("http://localhost:3000/login/patient");
+          });
       } catch (error) {
         console.log(error);
       }

@@ -4,6 +4,7 @@ const Otp = require('../models/otp')
 const { createCustomError } = require('../errors/custom-error')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
+const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#(&@!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
 
 const CreateTask =asyncWrapper(async (req, res, next) => {
   // const { otp } = req.body
@@ -38,20 +39,25 @@ const CreateTask =asyncWrapper(async (req, res, next) => {
 
 const getTask = asyncWrapper(async (req, res, next) => {
   const { email, password } = req.body
+  console.log(req.body);
   const task = await Task.findOne({ email }).lean()
+  console.log(task)
   if (!task) {
     return next(createCustomError(`Wrong Username/Password`, 404))
   }
   console.log(task.password)
-  if (await bcrypt.compare(password, task.password)){
+  const check = await bcrypt.compare(password, task.password);
+  console.log(check);
+  if (check){
 		const token = jwt.sign(
 			{
 				id: task._id,
 				email: task.eamil,
 				name: task.name
 			},
-			process.env.JWT_SECRET
+			JWT_SECRET
 		)
+    console.log(token)
     return res.json({ status: 'ok', data: token , task})
   }
 })

@@ -4,7 +4,9 @@ import SingleRecord from "./SingleRecord.jsx";
 function RenderingWindow(props) {
   return (
     <>
-      <section>{props.map((patient) => SingleRecord({ patient }))}</section>
+        <section>
+            {{ props }.map((patient) => SingleRecord({ patient }))}
+        </section>
     </>
   );
 }

@@ -121,7 +121,10 @@ const AdminRegister = () => {
       try {
         await axios
           .post("http://localhost:5000/signup/dr", info)
-          .then(() => console.log("success"));
+          .then(() => {
+            console.log("success");
+            window.location.replace("http://localhost:3000/login/doctor");
+          });
       } catch (error) {
         console.log(error);
       }
