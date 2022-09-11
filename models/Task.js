@@ -11,9 +11,13 @@ const TaskSchema = new mongoose.Schema({
   email: {
     type: String,
     unique: true,
-    required: [true, "must provide name(s)"],
+    required: [true, "must provide email"],
     trim: true,
-    maxlength: [1000, "name can not be more than 20 characters"],
+    // validate: {
+    //   validator: validator.isEmail,
+    //   message: "{VALUE} is not a valid email",
+    //   isAsync: false,
+    // },
   },
 
   password: {
