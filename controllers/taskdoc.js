@@ -83,6 +83,7 @@ const getTaskdr = asyncWrapper(async (req, res, next) => {
 
 
 const CreateReport = asyncWrapper(async (req, res) => {
+  console.log(req.body)
   const task = await Doc.create(req.body)
   res.status(201).json({ task })
 })
