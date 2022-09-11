@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../css/patientview.css";
+import RenderingWindow from "./RenderingWindow";
 
 function patientView(props) {
   return (
@@ -35,7 +36,9 @@ function patientView(props) {
             </div>
           </div>
         </div>
-        <div className="row" id="renderingWindow"></div>
+        <div className="row" id="renderingWindow">
+          <RenderingWindow />
+        </div>
       </section>
     </>
   );
