@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav  id = "navbarclr" className="navbar navbar-expand-sm shadow zProp fixed-top">
         <div className="container-fluid px-4">
           <NavLink id = "navbtnclr" className="navbar-brand" to="#">
-            Navbar
+            MediLocker
           </NavLink>
           <button
             className="navbar-toggler"
