@@ -3,6 +3,7 @@ const Otp = require("./models/otp");
 const Taskdoc = require("./models/Taskdoc.js");
 const asyncWrapper = require("./middleware/async");
 const { createCustomError } = require("./errors/custom-error");
+const bcrypt = require('bcrypt')
 
 const SendOTP = asyncWrapper(async (req, res, next) => {
   const check = await Taskdoc.findOne({ email: req.body.email });
@@ -22,15 +23,32 @@ const SendOTP = asyncWrapper(async (req, res, next) => {
     tls: { ciphers: "SSLv3" },
     service: "Outlook365",
   });
-  const app = Math.floor(Math.random() * 1000000);
+  const app = (Math.floor(Math.random() * 1000000)).toString();
+  console.log(app)
+  const Create = async() => {
+    try{
+      const otphash = await bcrypt.hash(`${app}`, 10);
+      console.log(otphash)
+      hashedOTP(otphash)
+    }
+    catch(err){
+      console.log(err);
+    }
+  }
+  Create()
+  // const otphash = await bcrypt.hash(app, 10)
   const options = {
     from: "medicare4472@outlook.com",
     to: `${req.body.email}`,
     subject: "OTP FOR VERIFICATION",
     text: `${app}`,
   };
-  const response = await Otp.create({ otp: app });
-  console.log("OTP SENT: ", response);
+
+  const hashedOTP = async(otphash) => {
+    const response = await Otp.create({ otp : otphash , email: req.body.email});
+    console.log("OTP SENT: ", response);
+  }
+  
 
   transporter.sendMail(options, function (err, info) {
     if (err) {
@@ -39,7 +57,7 @@ const SendOTP = asyncWrapper(async (req, res, next) => {
     }
     console.log("Sent" + info.response);
   });
-  res.status(200).send({ msg: "su" });
+  res.status(200).send({ msg: "ok" });
 });
 
 module.exports = { SendOTP };
