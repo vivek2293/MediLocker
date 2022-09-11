@@ -34,13 +34,8 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink id = "navbtnclr" className="nav-link" to="/services">
-                  Services
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink id = "navbtnclr" className="nav-link" to="/contact">
-                  Contact
+                <NavLink id = "navbtnclr" className="nav-link" to="/faq">
+                  FAQ
                 </NavLink>
               </li>
             </ul>
