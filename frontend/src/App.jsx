@@ -10,6 +10,7 @@ import AdminRegister from "./components/AdminRegister";
 import Login from './components/Login'
 import AdminLogin from './components/AdminLogin'
 import SingleRecord from "./components/SingleRecord";
+import ReportForm from "./components/ReportForm";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/register" element={<><Navbar /><LoginOption message="Register" /></>} />
         <Route exact path="/register/patient" element={<><Navbar /><Register /></>} />
         <Route exact path="/register/doctor" element={<><Navbar /><AdminRegister /></>} />
+        <Route exact path="/register/doctor/report" element={<><ReportForm /></>} />
       </Routes>
     </>
   );

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import axios from "axios";
 import {storage} from '../../src/firebase';
 import {getDownloadURL, ref, uploadBytesResumable} from '@firebase/storage';
 import registerCardImg from "../resources/images/registerCardImg.png";
@@ -8,10 +9,12 @@ const ReportForm = () => {
   const [progress ,Setprogress] = useState(0);
   
   const handleSubmit = () => {
-    const file = document.getElementById('upload').files[0]
+    const uploadfile = async() => {
+      const file = document.getElementById('upload').files[0]
       if(!file) return;
+
       const storageRef = ref(storage, `/files/${file.name}`);
-      const uploadTask = uploadBytesResumable(storageRef,file);
+      const uploadTask = await uploadBytesResumable(storageRef,file);
 
       uploadTask.on("state_changed", (snapshot) => {
           const progress = Math.round(snapshot.bytesTransferred/snapshot.totalBytes)*100;
@@ -21,6 +24,43 @@ const ReportForm = () => {
           getDownloadURL(uploadTask.snapshot.ref)
           .then(url => console.log(url));
       });
+    }
+    uploadfile();
+
+    const Hosname = document.getElementById('hospitalName').value
+    const Patname = document.getElementById('patientName').value
+    const Patemail = document.getElementById('email').value
+    const Docname = document.getElementById('doctorName').value;
+    const Docid = document.getElementById('doctorID').value;
+    const Remarks = document.getElementById('remarks').value;
+    const Prescription = document.getElementById('prescription').value;
+    const Disease = document.getElementById('disease').value;
+    const Object = {
+      Prescription,
+      Disease 
+    }
+
+    const info = {
+      Hosname,
+      Patname,
+      Patemail,
+      Docname,
+      Docid,
+      Remarks,
+      Object
+    }
+    console.log(info);
+
+    const postInfo = async () => {
+      try {
+        await axios
+          .post("http://localhost:5000/report/dr", info)
+          .then(() => console.log("success"));
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    postInfo();
   }
 
   return (
@@ -127,6 +167,17 @@ const ReportForm = () => {
                           style={{ height: "100px" }}
                         ></textarea>
                         <label htmlFor="prescription">Prescription</label>
+                      </div>
+                    </form>
+                    <form className="d-flex justify-content-center">
+                      <div className="form-floating col-md-10 my-2">
+                        <textarea
+                          className="form-control"
+                          placeholder="Leave a comment here"
+                          id="remarks"
+                          style={{ height: "100px" }}
+                        ></textarea>
+                        <label htmlFor="remarks">Remarks</label>
                       </div>
                     </form>
                     <div className="col-md-10 my-2">
