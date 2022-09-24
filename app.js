@@ -6,14 +6,20 @@ const connectDB = require("./db/connect");
 require("dotenv").config();
 const notFound = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
+const path = require('path');
+const publicPath = __dirname;
 // middleware
 
 app.use(cors());
-// app.use(express.static('./public'));
+app.use(express.static(path.join(publicPath, "frontend", "build")));
 app.use(express.json());
 
-// routes
 
+app.get("/", (req,res) => {
+  res.sendFile(path.join(publicPath, "frontend" ,"build" ,"index.html"));
+})
+
+// routes
 app.use("/", tasks);
 
 app.use(notFound);
