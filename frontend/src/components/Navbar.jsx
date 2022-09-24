@@ -8,7 +8,7 @@ const Navbar = () => {
       <nav  id = "navbarclr" className="navbar navbar-expand-sm shadow zProp fixed-top">
         <div className="container-fluid px-4">
           <NavLink id = "navbtnclr" className="navbar-brand" to="#">
-            Navbar
+            MediLocker
           </NavLink>
           <button
             className="navbar-toggler"
@@ -41,7 +41,7 @@ const Navbar = () => {
             </ul>
             <form className="d-flex" role="search">
               <Link className="nav-link" to="/login">
-                <button id = "loginbtnclr" className="btn btn-outline-primary rounded-pill ms-auto">
+                <button id = "loginbtnclr1" className="btn btn-outline-primary rounded-pill ms-auto">
                   <i className="fa fa-sign-in me-2"></i>Login
                 </button>
               </Link>
