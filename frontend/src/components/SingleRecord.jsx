@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/singlerecord.css";
+
 function SingleRecord(props) {
   const temp=props.props;
   console.log(props);

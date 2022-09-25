@@ -23,13 +23,13 @@ router.route('/').post(CreateTask)
 
 router.route('/report/dr').post(CreateReport).get(getTaskReport)
 
-router.route('/report/pat').get(getReport)
+router.route('/user').post(getReport)
 
 router.route('/login').post(getTask)
 
 router.route('/signup/dr').post(CreateTaskDR)
 
-router.route('/login/dr').post(getTaskdr)
+router.route('/user/dr').post(getTaskdr)
 
 router.route('/signup/otp').post(SendOTP)
 

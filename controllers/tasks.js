@@ -1,5 +1,6 @@
 const Task = require('../models/Task')
 const asyncWrapper = require('../middleware/async')
+const Doc = require("../models/Doc");
 const Otp = require('../models/otp')
 const { createCustomError } = require('../errors/custom-error')
 const jwt = require('jsonwebtoken')
@@ -63,8 +64,12 @@ const getTask = asyncWrapper(async (req, res, next) => {
 })
 
 const getReport = asyncWrapper(async (req, res, next) => {
+  console.log(req.body);
+  console.log({ Patemail: req.body.Patemail })
 
-  const task = await Doc.find({ Patemail: req.body.Patemail })
+    
+    const task = await Doc.find({ Patemail: req.body.Patemail })
+
   if (!task) {
     return next(createCustomError(`No task with id :}`, 404))
   }
