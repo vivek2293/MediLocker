@@ -1,27 +1,31 @@
-import React from "react";
+import axios from "axios";
+import React, { useState, useEffect } from "react";
 import "../css/patientdashboard.css";
 import RenderingWindow from "./RenderingWindow";
-import SingleRecord from "./SingleRecord";
 
-function PatientDashboard(props) {
-  const record = [
-    {
-      id: "1",
-      doctor: "KOTHA VIVEK",
-      date: "30/09/2003",
-      disease: "Piles",
-      remarks: "Kuch Nahi",
-      prescribedDrugs: "Crocin, Iboobproofen",
-    },
-    {
-      id: "2",
-      doctor: "Loda VIVEK",
-      date: "20/09/2003",
-      disease: "Piles 2",
-      remarks: "Kuch BHI Nahi",
-      prescribedDrugs: "Crocin, Iboobproofen, Ambrodryl",
-    },
-  ];
+function PatientDashboard() {
+  const [userEmail, setUserEmail] = useState("vivek22935@gmail.com");
+  const [userName, setUserName] = useState("");
+  const [userRecord,setUserRecord] = useState([{ }]);
+
+  useEffect(() => {
+    const fetchData = async() => {
+      try{
+        const data = await axios.post("http://localhost:5000/user", { "Patemail" : userEmail});
+        console.log(data);
+        const userInfo = data.data.task;
+        setUserEmail(userInfo[0].Patemail);
+        setUserName(userInfo[0].name);
+        setUserRecord(userInfo);
+      }
+      catch(error){
+        console.log(error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+  
   return (
     <>
       <section className="patientDashboardSection">
@@ -36,21 +40,15 @@ function PatientDashboard(props) {
               </svg>
             </div>
             <div className="col-md-10 p-2 d-flex flex-column justify-content-center align-items-start">
-              <h3 id="profileName">{props.name}Nachiket Dodia</h3>
+              <h3 id="profileName">{userName}</h3>
               <h4 className="text-muted">
-                {props.email}nachiketdodia33@gmail.com
+                {userEmail}
               </h4>
             </div>
           </div>
         </div>
         <div className="row" id="renderingWindow">
-
-          {record.map((patient) => (
-            <div key={patient.id}>
-              <SingleRecord props={patient} />
-            </div>
-          ))}
-          {/* <RenderingWindow props={props.records}/> */}
+          <RenderingWindow props={userRecord}/>
         </div>
       </section>
     </>

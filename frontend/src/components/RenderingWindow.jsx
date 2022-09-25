@@ -1,11 +1,11 @@
 import React from "react";
 import SingleRecord from "./SingleRecord.jsx";
 
-function RenderingWindow(props) {
+function RenderingWindow(records) {
   return (
     <>
         <section>
-            {{ props }.map((patient) => <SingleRecord props={ patient } />)}
+            {records.props.map((patient) => <SingleRecord props={ patient } />)}
         </section>
     </>
   );
