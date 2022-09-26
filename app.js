@@ -15,7 +15,7 @@ app.use(express.static(path.join(publicPath, "frontend", "build")));
 app.use(express.json());
 
 
-app.get("/", (req,res) => {
+app.get("*", (req,res) => {
   res.sendFile(path.join(publicPath, "frontend" ,"build" ,"index.html"));
 })
 
@@ -28,7 +28,7 @@ const port = process.env.PORT || 5000;
 
 const start = async () => {
   try {
-    await connectDB(process.env.MONGO_URI);
+    connectDB(process.env.MONGO_URI);
     app.listen(port, () =>
       console.log(`Server is listening on port ${port}...`)
     );
