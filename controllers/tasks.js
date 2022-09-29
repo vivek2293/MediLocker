@@ -47,9 +47,8 @@ const getTask = asyncWrapper(async (req, res, next) => {
     return next(createCustomError(`Wrong Username/Password`, 404))
   }
   console.log(task.password)
-  const check = 
-  console.log(check);
-  if (check){await bcrypt.compare(password, task.password);
+
+  if (await bcrypt.compare(password, task.password)){
 		const token = jwt.sign(
 			{
 				id: task._id,

@@ -69,7 +69,7 @@ const Register = () => {
           .post("http://localhost:5000/", info)
           .then(() => {
             console.log("success");
-            window.location.replace("http://localhost:3000/login/patient");
+            window.location.replace("http://localhost:5000/login/patient");
           });
       } catch (error) {
         console.log(error);

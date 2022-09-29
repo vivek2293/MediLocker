@@ -15,7 +15,7 @@ function PatientDashboard() {
         console.log(data);
         const userInfo = data.data.task;
         setUserEmail(userInfo[0].Patemail);
-        setUserName(userInfo[0].name);
+        setUserName(userInfo[0].Patname);
         setUserRecord(userInfo);
       }
       catch(error){

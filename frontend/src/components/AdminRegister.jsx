@@ -123,7 +123,7 @@ const AdminRegister = () => {
           .post("http://localhost:5000/signup/dr", info)
           .then(() => {
             console.log("success");
-            window.location.replace("http://localhost:3000/login/doctor");
+            window.location.replace("http://localhost:5000/login/doctor");
           });
       } catch (error) {
         console.log(error);

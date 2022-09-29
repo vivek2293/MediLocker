@@ -21,7 +21,7 @@ function Login() {
         if (result.status === 200) {
           console.log(result.data.data)
           localStorage.setItem((result.data.data), 'TestLogin');
-          window.location.replace("http://localhost:3000/user");
+          window.location.replace("http://localhost:5000/user");
           alert("Success");
         } else {
           alert("Failed");

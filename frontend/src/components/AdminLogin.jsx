@@ -25,7 +25,7 @@ function Login() {
           console.log(result);
           console.log(result.data.data);
           localStorage.setItem('TOKEN_KEY', (result.data.data));
-          window.location.replace("http://localhost:3000/admin")
+          window.location.replace("http://localhost:5000/admin")
         } else {
           alert("Failed");
         }
