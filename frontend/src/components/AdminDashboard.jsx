@@ -1,21 +1,10 @@
-import axios from "axios";
 import React from "react";
-import '../css/admindashboard.css'
+import axios from "axios";
+import "../css/admindashboard.css";
+import { useState, useEffect } from "react";
 import AdminSearch from "./AdminSearch";
 
-function searchByEmail() {
-  const email = document.getElementById('email').value;
-  console.log({ Patemail: email });
-  try {
-    axios.get('http://localhost:5000/report/dr', { Patemail: email })
-    .then(()=>console.log("success"))
-
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-function AdminDashboard(props) {
+function AdminDashboard() {
   const dashboardSection = {
     height: "100vh",
     width: "100%",
@@ -25,28 +14,60 @@ function AdminDashboard(props) {
   const docInfoSection = {
     height: "100vh",
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        //NEED DATA FROM SERVER //NEED TO SET DR EMAIL ON LOGIN TO CACHE
+        const data = await axios.post(
+          "OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO",
+          {
+            //BODY
+          }
+        );
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const [name, setName] = useState("Vivek");
+  const [email, setEmail] = useState("vivek@gmail.com");
+  const [imr, setImr] = useState(0);
+  const [prescriptionCount, setPrescriptionCount] = useState(56);
+
   return (
     <>
       <section
         className="dashboardSection row align-items-center"
         style={dashboardSection}
       >
-        <div className="col-md-3 d-flex flex-column justify-content-start align-items-center" style={docInfoSection} id='profileSection'>
+        <div
+          className="col-md-3 d-flex flex-column justify-content-start align-items-center"
+          style={docInfoSection}
+          id="profileSection"
+        >
           <svg height="150" width="150">
             <circle cx="70" cy="70" r="55" fill="grey" />
           </svg>
-          <h4 className="fw-bold display-6 text-center">{props.name}Vivek Kumar</h4>
-          <h6 className=" mutedInfo">{props.email}vivek_k69@gmail.com</h6>
-          <h6 className=" mutedInfo">IMR : {props.imr}104110</h6>
-          <div id="prescriptionCard" className="card px-3 py-3 mt-5 d-flex flex-column justify-content-center align-item-center">
-            <div id='prescriptionText' className="text-center">No. of Prescriptions </div>
+          <h4 className="fw-bold display-6 text-center">{name}</h4>
+          <h6 className="mutedInfo">{email}</h6>
+          <h6 className="mutedInfo">IMR : {imr}</h6>
+          <div
+            id="prescriptionCard"
+            className="card px-3 py-3 mt-5 d-flex flex-column justify-content-center align-item-center"
+          >
+            <div id="prescriptionText" className="text-center">
+              No. of Prescriptions{" "}
+            </div>
             <hr />
-            <div className="display-3 text-center"> {props.prescriptionNumber}56</div>
+            <div className="display-3 text-center">{prescriptionCount}</div>
           </div>
         </div>
-      
-        <AdminSearch name="Vivek" searchByEmail={searchByEmail} />
-
+        {/* Will Toggle this window with search bar and info */}
+        <AdminSearch name={name} />
       </section>
     </>
   );
