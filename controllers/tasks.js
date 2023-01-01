@@ -8,9 +8,8 @@ const bcrypt = require('bcrypt')
 const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#(&@!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
 
 const CreateTask =asyncWrapper(async (req, res, next) => {
-  // const { otp } = req.body
   const task1 = await Otp.findOne({ email:req.body.email }).lean()
-  console.log()
+  console.log("Console log from backend 'CreateTask'\n" + task1)
   if (!await bcrypt.compare(req.body.otp, task1.otp)){
 		return next(createCustomError(`Invalid OTP`, 404))
   }else{

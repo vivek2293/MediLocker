@@ -3,8 +3,6 @@ const mongoose = require('mongoose')
 
 
 const TaskSchema = new mongoose.Schema({
-  
-  
   name: {
     type: String,
     required: [true, 'must provide name(s)'],
@@ -20,9 +18,7 @@ const TaskSchema = new mongoose.Schema({
     trim: true,
     maxlength: [1000, 'name can not be more than 20 characters'],
   },
-  
-  
-  
+
   password: {
     type: String,
     required: [true, 'must provide purpose'],

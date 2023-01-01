@@ -21,7 +21,9 @@ const{
 
 router.route('/').post(CreateTask)
 
-router.route('/report/dr').post(CreateReport).get(getTaskReport)
+router.route('/report/dr').post(CreateReport)
+
+router.route('/report/patient').post(getTaskReport)
 
 router.route('/user').post(getReport)
 
