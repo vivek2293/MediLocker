@@ -8,7 +8,7 @@
     "mongoose": "^6.6.0",
     "nodemailer": "^6.7.8"
   },
-  "name": "hackodisha",
+  "name": "Medilocker",
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
