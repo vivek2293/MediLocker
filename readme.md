@@ -1,4 +1,4 @@
-##MediLocker
+# MediLocker
 
 ## What Our Project Does:
 - It bridges the gap in communication between patients and doctors and thus significantly decreases the chance of medical negligence.
