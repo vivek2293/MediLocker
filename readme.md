@@ -1,3 +1,5 @@
+#MediLocker
+
 ## What Our Project Does:
 - It bridges the gap in communication between patients and doctors and thus significantly decreases the chance of medical negligence.
 - Can be used in big medical institutions as well as small clinics too in order to maintain proper medical reccords of each patient efficiently.
