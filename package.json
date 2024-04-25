@@ -6,7 +6,7 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.11.3",
-    "nodemailer": "^6.7.8"
+    "nodemailer": "^6.9.9"
   },
   "name": "medilocker",
   "version": "1.0.0",
